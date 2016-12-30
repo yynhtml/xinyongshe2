@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>“年年有余”智能存款1月1 日全新上线！利率最高上浮80%</title>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			html,body{height: 100%;width: 100%;overflow: hidden;font-family: "微软雅黑";}
+			.swiper-container{height: 100%;width: 100%;overflow: hidden;}
+			.swiper-slide{width: 100%;height: 100%;position: relative;}
+			.swiper-slide:nth-child(1){background: url(img/14793635_154116498000_2.jpg);background-size: 100% 103%;}
+			.swiper-slide:nth-child(1) p{line-height: 1.2rem;}
+			.swiper-slide:nth-child(1) p:nth-of-type(2){text-align: center;}
+			.swiper-slide:nth-child(1) p:nth-of-type(3){text-align: center;}
+			.swiper-slide:nth-child(1) p:nth-of-type(5){text-align: center;}
+			.swiper-slide:nth-child(1) img{margin:0;margin-left: 2rem;width: 12rem;height:10rem;}
+			.swiper-slide:nth-child(1) b{font-size: 1.2rem;color: #f00;display: inline-block;}
+			
+			
+			.swiper-slide:nth-child(2){background: url(img/14793635_154116498000_2.jpg);background-size: 100% 103%;}
+			.swiper-slide:nth-child(2) p{line-height: 2.5rem;text-align: center;}
+			.swiper-slide:nth-child(2) img:nth-of-type(1){margin-left: 1rem;width: 9.5rem;height: 8.5rem;margin-top: 1rem;transform: rotate(-10deg);}
+			.swiper-slide:nth-child(2) img:nth-of-type(2){position: absolute;bottom: 1rem;right: 1rem;width: 10rem;height: 9.5rem;transform: rotate(10deg);}
+			.swiper-slide:nth-child(2) b{font-size: 1.2rem;display: inline-block;}
+			
+			
+			.swiper-slide:nth-child(3){background: url(img/55bb9569dc545.jpg);background-size: 100% 100%;}
+			.swiper-slide:nth-child(3) img{width: 14rem;margin:0.3rem auto;margin-left: 1rem;height: 7rem;}
+			.swiper-slide:nth-child(3) p{line-height: 1.4rem;text-align:justify;padding:0 0.5rem;font-size:0.8rem;}
+			.swiper-slide:nth-child(3) b{color: #f00;}
+			
+			.swiper-slide{background: url(img/55bb9569dc545.jpg);background-size: 100% 100%;}
+			.swiper-slide img{width: 14rem;margin:0.3rem auto;margin-left: 1rem;}
+			.swiper-slide p{line-height: 1.4rem;text-align:justify;font-size:0.8rem;padding:0 0.5rem;}
+			.swiper-slide b{color: #f00;}
+			
+			
+			
+			
+			#btn{height: 1.5rem;width: 1.5rem;background: #ccc;border-radius: 50%;position: fixed;top: 1rem;right: 1rem;z-index: 2;background: url(img/yin.png) no-repeat center;background-size: 80% 80%;}
+			.yin{animation: play 5s linear infinite;
+				-moz-animation:play 5s linear infinite;
+				-webkit-animation:play 5s linear infinite;
+				-o-animation:play 5s linear infinite;
+				-ms-animation:play 5s linear infinite;
+			}
+			@keyframes play{
+				from{transform: rotate(0);}
+				to{transform: rotate(360deg);}
+			}
+			@-webkit-keyframes play{
+				from{transform: rotate(0);}
+				to{transform: rotate(360deg);}
+			}
+			@-moz-keyframes play{
+				from{transform: rotate(0);}
+				to{transform: rotate(360deg);}
+			}
+			@-o-keyframes play{
+				from{transform: rotate(0);}
+				to{transform: rotate(360deg);}
+			}
+			@-ms-keyframes play{
+				from{transform: rotate(0);}
+				to{transform: rotate(360deg);}
+			}
+		</style>
+		<script type="text/javascript">
+		$(function(){
+			var myswiper = new Swiper(".swiper-container",{
+				direction: 'vertical',
+				onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+			    swiperAnimateCache(swiper); //隐藏动画元素 
+				    swiperAnimate(swiper); //初始化完成开始动画
+				}, 
+				onSlideChangeEnd: function(swiper){ 
+				    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+				}
+			});
+			var aud = $("#aud");
+			var btn = $("#btn");
+			btn.click(function(){
+				if(aud[0].paused){
+					aud[0].play();
+					$(this).addClass("yin");
+				}else{
+					aud[0].pause();
+					$(this).removeClass("yin");
+				}
+			})
+		})
+		</script>
+	</head>
+	<body>
+		<audio src="weiwei.mp3" autoplay="autoplay" id="aud"></audio>
+		<div id="btn" class="yin"></div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<p>“年年有余”智能存款</p>
+					<p>1月1 日全新上线！</p>
+					<p><b class="ani" swiper-animate-effect="tada" swiper-animate-duration="1s" swiper-animate-delay="0s">利率最高上浮80%</b></p>
+   					<p>非理财、非保险、无风险、收益高，是您最好的选择！智能存款，智者之选。</p>
+   					<p>五万元两年期收益2940元<br />
+五万元三年期收益5775元<br />
+五万元五年期收益11250元<b class="ani" swiper-animate-effect="tada" swiper-animate-duration="1s" swiper-animate-delay="0.5s">高达11250</b></p>
+					<p>凡到场咨询办理业务者，均赠送<b class="ani" swiper-animate-effect="tada" swiper-animate-duration="1s" swiper-animate-delay="0.8s">精美挂历</b>一本</p>
+					<img src="img/123.png" class="ani" swiper-animate-effect="rotateIn" swiper-animate-duration="1s" swiper-animate-delay="0.6s"/>
+					<p>地址:果菜批发市场对面城郊信用社<br />
+						咨询电话：0315-6619511 </p>
+				</div>
+				<div class="swiper-slide">
+					<p class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1.4s" swiper-animate-delay="0s">
+						手握手的承诺，心贴心的服务<br />
+						果菜批发市场对面城郊信用社，您最好的选择。<br />
+						地址：果菜批发市场对面城郊信用社<br />
+						咨询电话：<b>0315-6619511</b>
+					</p>
+					<img src="img/IMG_1303.JPG"/>
+					<img src="img/IMG_1302.JPG"/>
+				</div>
+				<div class="swiper-slide">
+					<img src="img/7.png" class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"/>
+					<p>
+						一年期智能存款收益：<br />
+						1、您存入3万（含）-10万区间存款，3万元到期您将收入675元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入72元</b><br />
+						2、您存入10万（含）-20万区间存款，10万元到期您将收入2400元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入390元</b><br />
+						3、您存入20万（含）-50万区间存款，20万元到期您将收入5100元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入1080元</b><br />
+						4、您存入50万（含）以上存款，50万元到期您将收入13500元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入3450元</b>
+					</p>
+				</div>
+				<div class="swiper-slide">
+					<img src="img/11.png" class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1s" swiper-animate-delay="0s" style="height: 14rem;"/>
+					<p>
+						二年期智能存款收益：<br />
+						1、您存入5万（含）-20万区间存款，5万元两年到期您将收入2940元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入210元</b><br />
+						2、您存入20万（含）以上存款，20万元两年到期您将收入12600元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入1680元</b>
+											</p>
+				</div>
+				<div class="swiper-slide">
+					<img src="img/41.png" class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1s" swiper-animate-delay="0s" style="height: 12rem;"/>
+					<p style="line-height: 1.5rem;">
+						三年期智能存款收益：<br />
+						1、您存入5万（含）-20万区间存款，5万元三年到期您将收入5775元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入412.5元</b><br />
+						2、您存入20万（含）以上存款，20万元三年到期您将收入24750元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入3300元</b>
+					</p>
+				</div>
+				<div class="swiper-slide">
+					<img src="img/91.png" class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1s" swiper-animate-delay="0s" style="height: 12rem;"/>
+					<p style="line-height: 1.5rem;">
+						五年期智能存款收益<br />
+						1、您存入5万（含）-10万区间存款，5万元五年到期您将收入11250元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入675元</b><br />
+						2、您存入10万（含）以上存款，10万元五年到期您将收入24000元，较现行利率<b class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">多收入2850元</b>
+					</p>
+				</div>
+				<div class="swiper-slide" style="background: #fff;">
+					<p style="text-align: center;font-size: 1.5rem;font-weight: bold;margin-top: 0.5rem;" class="ani" swiper-animate-effect="swing" swiper-animate-duration="1.5s" swiper-animate-delay="0s">我们敬候您的光临</p>
+					<img src="img/406186f8ed63127c589e1d.jpg" style="width: 10rem;margin: 0;margin-left: 3rem;"/>
+					<img src="img/IMG_1304.JPG" style="height: 14rem;margin: 1rem 0;width: 16rem;margin-top: 0;margin-bottom:0.5rem;"/>
+					<p>咨询电话：<b style="color: #000;font-size: 1.2rem;">0315-6619511</b></p>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
